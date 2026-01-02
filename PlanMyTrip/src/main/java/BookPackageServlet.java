@@ -9,7 +9,7 @@ public class BookPackageServlet extends HttpServlet {
 
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/travel_db";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "prashant6689"; // CHANGE THIS
+    private static final String DB_PASSWORD = "Your DB Password"; // CHANGE THIS
 
     public Connection getConnection() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -46,3 +46,4 @@ public class BookPackageServlet extends HttpServlet {
         }
     }
 }
+
