@@ -9,7 +9,7 @@ import java.sql.*;
 public class DashboardServlet extends HttpServlet {
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/travel_db";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "prashant6689"; // CHANGE TO YOUR PASSWORD
+    private static final String DB_PASSWORD = "Your DB Password"; // CHANGE TO YOUR PASSWORD
 
     public Connection getConnection() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -72,3 +72,4 @@ public class DashboardServlet extends HttpServlet {
         out.println("</div></div></body></html>");
     }
 }
+
