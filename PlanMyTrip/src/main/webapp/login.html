@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | PlanMyTrip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: radial-gradient(circle at 23% 20%, #43cea2 0%, #185a9d 85%);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-box {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 48px #185a9d25;
+            padding: 2.5rem 2rem 2rem;
+            width: 330px;
+        }
+        .login-title {
+            font-weight: bold;
+            color: #185a9d;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.65rem;
+            letter-spacing: 1px;
+        }
+        .form-control:focus {
+            border-color: #43cea2;
+            box-shadow: 0 0 6px #43cea240;
+        }
+        .btn-custom {
+            background: linear-gradient(90deg, #43cea2, #185a9d);
+            border: none;
+            color: #fff;
+            font-weight: 600;
+        }
+        .btn-custom:hover {
+            background: linear-gradient(90deg, #185a9d, #43cea2);
+        }
+        .error-msg {
+            color: #d62d2d;
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.04rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-title">PlanMyTrip</div>
+        <form method="post" action="LoginServlet">
+            <div class="mb-3">
+                <input class="form-control" type="text" name="username" required placeholder="Username"/>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="password" name="password" required placeholder="Password"/>
+            </div>
+            <div class="d-grid mb-2">
+                <button class="btn btn-custom btn-block" type="submit">Login</button>
+            </div>
+        </form>
+        <div class="error-msg" id="error-msg"></div>
+    </div>
+    <script>
+        let params = new URLSearchParams(window.location.search);
+        if (params.get("error") === "true") {
+            document.getElementById("error-msg").textContent = "Invalid Username or Password.";
+        } else if (params.get("error") === "server") {
+            document.getElementById("error-msg").textContent = "Internal error. Please try again.";
+        }
+    </script>
+</body>
+</html>

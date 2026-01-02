@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PlanMyTrip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at 20% 20%, #43cea2cc 0%, #185a9dcc 85%), url('image.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .main-content {
+            margin: 0 auto;
+            margin-top: 48px;
+            padding: 36px 32px;
+            border-radius: 1.5rem;
+            background: rgba(255, 255, 255, 0.82);
+            box-shadow: 0 12px 42px #185a9d24;
+            max-width: 1080px;
+        }
+        .dashboard-title {
+            text-align: center; font-weight: bold; color: #185a9d;
+            font-size: 2.25rem; margin-bottom: 38px; letter-spacing: 2px; text-shadow: 0 6px 28px #185a9d55;
+        }
+        .dashboard-grid {
+            display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;
+        }
+        .dashboard-card {
+            background: linear-gradient(135deg, #185a9d 62%, #43cea299 100%);
+            width: 252px; min-height: 135px; border-radius: 1.15rem; color: #fff;
+            box-shadow: 0 6px 22px #185a9d18;
+            display: flex; flex-direction: row; align-items: center; gap: 18px;
+            padding: 22px 22px; font-size: 1.09rem; font-weight: 600; text-decoration: none; opacity: 0.98;
+            transition: all 0.14s;
+            border: 2px solid #43cea2;
+        }
+        .dashboard-card i {
+            font-size: 1.9rem; color: #43cea2;
+            background: #185a9d40; border-radius: 50%; width: 42px; height: 42px;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 3px 12px #43cea250;
+        }
+        .dashboard-card:hover, .dashboard-card:focus {
+            background: linear-gradient(135deg, #43cea2 30%, #185a9d 100%);
+            color: #fff; box-shadow: 0 14px 34px #43cea260, 0 0 0 2px #43cea260;
+            transform: translateY(-2px) scale(1.045); text-decoration: none; border: 2px solid #185a9d;
+        }
+        @media (max-width: 900px) { .main-content{padding:12px 4px;} .dashboard-grid { gap: 12px;}
+          .dashboard-card { width: 98vw; max-width: 400px;}
+          .dashboard-title { font-size: 1.45rem; margin-bottom: 14px;} }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="dashboard-title">PlanMyTrip</div>
+        <div class="dashboard-grid">
+            <a class="dashboard-card" href="AddPersonalDetails.html"><i class="bi bi-person-plus-fill"></i> Add Personal Details</a>
+            <a class="dashboard-card" href="UpdatePersonalDetails.html"><i class="bi bi-pencil-square"></i> Update Personal Details</a>
+            <a class="dashboard-card" href="ViewPersonalDetails.html"><i class="bi bi-eye-fill"></i> View Personal Details</a>
+            <a class="dashboard-card" href="CheckPackage.html"><i class="bi bi-gift-fill"></i> Check Package</a>
+            <a class="dashboard-card" href="BookPackage.html"><i class="bi bi-box2-heart-fill"></i> Book Package</a>
+            <a class="dashboard-card" href="ViewBookedPackagesServlet"><i class="bi bi-clipboard-check-fill"></i> View Booked Packages</a>
+            <a class="dashboard-card" href="ViewHotel.html"><i class="bi bi-buildings-fill"></i> View Hotels</a>
+            <a class="dashboard-card" href="BookHotel.html"><i class="bi bi-house-heart-fill"></i> Book Hotel</a>
+            <a class="dashboard-card" href="ViewDestination.html"><i class="bi bi-geo-alt-fill"></i> Destinations</a>
+            <a class="dashboard-card" href="LogoutServlet"><i class="bi bi-door-open-fill"></i> Logout</a>
+        </div>
+    </div>
+</body>
+</html>
